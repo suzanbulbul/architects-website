@@ -1,42 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-K5V96TF6");
-    </script>
-    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EFL ACC Widget Test</title>
+    <title>Örnek Sayfa</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .animated-box {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        margin: 20px auto;
+        animation: moveBox 2s infinite alternate;
+      }
+
+      @keyframes moveBox {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(50px);
+        }
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #2ecc71;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      button:hover {
+        background-color: #27ae60;
+      }
+
+      img {
+        max-width: 300px;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
-    3
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-K5V96TF6"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <h1>EFL ACC Widget Test</h1>
-    <!--  <efl-acc-widget></efl-acc-widget> -->
-    <script src="./dist/efl-acc.iife.js" defer></script>
-    <script
-      src="https://cdn.jsdelivr.net/gh/jerit-baiju/a11y-widget@latest/script.js"
-      position="bottom-left"
-    ></script>
+    <h1>Başlık 1</h1>
+    <h2>Başlık 2</h2>
+    <h3>Başlık 3</h3>
+    <h4>Başlık 4</h4>
+    <h5>Başlık 5</h5>
+    <h6>Başlık 6</h6>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <div class="animated-box"></div>
+
+    <img src="https://picsum.photos/300/200" alt="Rastgele Görsel" />
+
+    <br />
+    <button>Tıkla Beni</button>
+    <script src="https://pub-2107886f9af9451ab7be4d40bc6e05c5.r2.dev/efl-a11y.iife.js"></script>
   </body>
 </html>
