@@ -2,17 +2,34 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <title>Örnek Sayfa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Örnek Sayfa</title>
     <style>
       body {
         font-family: Arial, sans-serif;
         text-align: center;
         padding: 20px;
+        margin: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 10px 0;
+      }
+
+      p {
+        max-width: 600px;
+        margin: 0 auto 20px;
+        line-height: 1.6;
       }
 
       .animated-box {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         background-color: #3498db;
         margin: 20px auto;
         animation: moveBox 2s infinite alternate;
@@ -23,19 +40,20 @@
           transform: translateY(0);
         }
         100% {
-          transform: translateY(50px);
+          transform: translateY(40px);
         }
       }
 
       button {
         padding: 10px 20px;
-        font-size: 16px;
+        font-size: 1rem;
         background-color: #2ecc71;
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         margin-top: 20px;
+        transition: background-color 0.3s;
       }
 
       button:hover {
@@ -43,15 +61,33 @@
       }
 
       img {
-        max-width: 300px;
+        max-width: 100%;
+        height: auto;
         margin-top: 20px;
+        border-radius: 8px;
+      }
+
+      /* Küçük ekranlar için */
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+
+        .animated-box {
+          width: 60px;
+          height: 60px;
+        }
+
+        button {
+          width: 100%;
+          font-size: 0.9rem;
+          padding: 12px;
+        }
       }
     </style>
-
     <script src="./dist/efl-a11y.js"></script>
   </head>
   <body>
-    tr
     <h1>Başlık 1</h1>
     <h2>Başlık 2</h2>
     <h3>Başlık 3</h3>
@@ -66,9 +102,8 @@
 
     <div class="animated-box"></div>
 
-    <img src="https://picsum.photos/300/200" alt="Rastgele Görsel" />
+    <img src="https://picsum.photos/600/400" alt="Rastgele Görsel" />
 
-    <br />
     <button>Tıkla Beni</button>
   </body>
 </html>
